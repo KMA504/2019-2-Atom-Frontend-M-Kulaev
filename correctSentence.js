@@ -18,6 +18,12 @@ correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
 export default function correctSentence(text) {
-  // your solution goes here
-  return text;
+	if (text.charAt(text.length-1) !== '.')
+	{
+		text = text + '.';
+	}
+	
+	text = text.charAt(0).toUpperCase() + text.slice(1, text.length);
+  	
+  	return text;
 }
